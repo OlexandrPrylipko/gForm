@@ -54,4 +54,16 @@ public class ActionsWithElements {
             return false;
         }
     }
+
+    // Getting text from an element (link, button, paragraph ...);
+    public String getElementText(WebElement element) {
+        try {
+            wait.until(ExpectedConditions.visibilityOf(element));
+            return element.getText();
+        } catch (Exception e) {
+            LOG.error("Element not found, text not was received: " + e);
+            Assert.fail("Element not found, text not was received: " + e);
+        }
+        return null;
+    }
 }

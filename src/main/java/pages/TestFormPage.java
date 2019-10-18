@@ -42,7 +42,7 @@ public class TestFormPage extends BasePage {
     }
 
     @Step("Enter email address in the 'Email' field")
-    public void enterTextinTheYourAgeField(String age) {
+    public void enterTextInTheYourAgeField(String age) {
         actionsWithElements.enterTextInToElement(yourAgeField, age);
     }
 
@@ -92,5 +92,13 @@ public class TestFormPage extends BasePage {
     @Step("Click on 'Submit' button")
     public void clickOnSubmitButton() {
         actionsWithElements.clickOnElement(submitButton);
+    }
+
+    public void fillInTheForm(String email, String age, String name, String mood) {
+        enterTextInTheEmailField(email);
+        enterTextInTheYourAgeField(age);
+        enterTextInTheYourNameField(name);
+        selectMood(mood);
+        clickOnSubmitButton();
     }
 }

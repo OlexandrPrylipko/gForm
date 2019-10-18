@@ -7,9 +7,9 @@ import static libraries.Utilities.currentDataAndTime;
 
 public class Person {
 
-    public static String EMAIL = "uvofinderc+" + currentDataAndTime() + "@gmail.com";
-    public static String BIRTHDAY = getBirthdayDate();
-    public static String NAME = getName();
+    public static final String EMAIL = "uvofinderc+" + currentDataAndTime() + "@gmail.com";
+    public static final String BIRTHDAY = getBirthdayDate();
+    public static final String NAME = getName();
 
     private static String getBirthdayDate() {
 
