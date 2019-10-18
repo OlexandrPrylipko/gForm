@@ -10,7 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import settings.BasePage;
 
-public class TestFormPage extends BasePage {
+public class ViewFormPage extends BasePage {
 
     private Logger LOG = Logger.getLogger(getClass());
 
@@ -20,19 +20,31 @@ public class TestFormPage extends BasePage {
     @FindBy(css = "input[type='email']")
     private WebElement emailField;
 
+    @FindBy(css = "#i2")
+    private WebElement emailErrorMessage;
+
     @FindBy(css = "input[type='date']")
     private WebElement yourAgeField;
+
+    @FindBy(xpath = "//*[text()='Your age: ']/../../../following-sibling::div[2]")
+    private WebElement yourAgeErrorMessage;
 
     @FindBy(css = "input[aria-label='Your name:']")
     private WebElement yourNameField;
 
+    @FindBy(xpath = "//*[text()='Your name: ']/../../../following-sibling::div[2]")
+    private WebElement yourNameErrorMessage;
+
     @FindBy(css = "input[aria-label='Другой ответ']")
     private WebElement anotherAnswerField;
+
+    @FindBy(xpath = "//*[text()='How is your mood? ']/../../../following-sibling::div[3]")
+    private WebElement anotherAnswerErrorMessage;
 
     @FindBy(css = ".freebirdFormviewerViewNavigationSubmitButton")
     private WebElement submitButton;
 
-    public TestFormPage(WebDriver driver) {
+    public ViewFormPage(WebDriver driver) {
         super(driver);
     }
 
@@ -41,14 +53,38 @@ public class TestFormPage extends BasePage {
         actionsWithElements.enterTextInToElement(emailField, email);
     }
 
+    public Boolean emailErrorMessageIsDisplayed() {
+        return actionsWithElements.isElementPresent(emailErrorMessage);
+    }
+
+    public String getEmailErrorMessageText() {
+        return actionsWithElements.getElementText(emailErrorMessage).trim();
+    }
+
     @Step("Enter email address in the 'Email' field")
     public void enterTextInTheYourAgeField(String age) {
         actionsWithElements.enterTextInToElement(yourAgeField, age);
     }
 
+    public Boolean yourAgeErrorMessageIsDisplayed() {
+        return actionsWithElements.isElementPresent(yourAgeErrorMessage);
+    }
+
+    public String getYourAgeErrorMessageText() {
+        return actionsWithElements.getElementText(yourAgeErrorMessage).trim();
+    }
+
     @Step("Enter name in the 'Your name' field")
     public void enterTextInTheYourNameField(String name) {
         actionsWithElements.enterTextInToElement(yourNameField, name);
+    }
+
+    public Boolean yourNameErrorMessageIsDisplayed() {
+        return actionsWithElements.isElementPresent(yourNameErrorMessage);
+    }
+
+    public String getYourNameErrorMessageText() {
+        return actionsWithElements.getElementText(yourNameErrorMessage).trim();
     }
 
     private void clickOnMoodCheckbox(String mood) {
@@ -62,17 +98,11 @@ public class TestFormPage extends BasePage {
     }
 
     @Step("Select mood")
-    public void selectMood(String mood) {
+    private void selectMood(String mood) {
         switch (mood) {
             case "Excellent":
-                clickOnMoodCheckbox(mood);
-                break;
             case "Good enough":
-                clickOnMoodCheckbox(mood);
-                break;
             case "Could be better":
-                clickOnMoodCheckbox(mood);
-                break;
             case "Very bad":
                 clickOnMoodCheckbox(mood);
                 break;
@@ -89,8 +119,16 @@ public class TestFormPage extends BasePage {
         }
     }
 
+    public Boolean anotherAnswerErrorMessageIsDisplayed() {
+        return actionsWithElements.isElementPresent(anotherAnswerErrorMessage);
+    }
+
+    public String getAnotherAnswerErrorMessageText() {
+        return actionsWithElements.getElementText(anotherAnswerErrorMessage).trim();
+    }
+
     @Step("Click on 'Submit' button")
-    public void clickOnSubmitButton() {
+    private void clickOnSubmitButton() {
         actionsWithElements.clickOnElement(submitButton);
     }
 
