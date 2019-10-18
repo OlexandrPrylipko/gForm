@@ -27,7 +27,7 @@ public class BasePage {
     @Step("Open page")
     public void openPage(String url) {
         try {
-            driver.get(url);
+            driver.get("https://goo.gl/forms/t16Uov7ZHXCrB2ZE2" + url);
             waitFullLoadPage();
             LOG.info("Website " + getPageUrl() + " was opened");
         } catch (Exception e) {
