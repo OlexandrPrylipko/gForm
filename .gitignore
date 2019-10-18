@@ -1,6 +1,7 @@
 .idea/
-*.iml
-.allure/
 allure-results/
+drivers/
 log/
 target/
+*.iml
+.allure/
