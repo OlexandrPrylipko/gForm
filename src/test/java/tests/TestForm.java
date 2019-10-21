@@ -32,11 +32,7 @@ public class TestForm extends BaseTest {
     @Severity(SeverityLevel.BLOCKER)
     public void submitFormWithCorrectData() {
 
-        viewFormPage.fillInTheForm(
-                EMAIL,
-                BIRTHDAY,
-                NAME,
-                MOOD);
+        viewFormPage.fillInTheForm(EMAIL, BIRTHDAY, NAME, MOOD);
 
         checkExpectedResult(
                 "Form card block is not displayed!",
