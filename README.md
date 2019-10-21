@@ -9,9 +9,7 @@
     <a href="https://drive.google.com/open?id=12MEfE1yhDS6TV7g6Dd0cXLpp8qY4f-vPa48owcZ4bMw">Analize web-form</a>
   </li>
 </ul>
-
 <hr>
-
 <h1>Instructions for running tests on different OS</h1>
 <ul>
   <li>
@@ -23,5 +21,3 @@
   <li>
     <a href="https://github.com/OlexandrPrylipko/gForm/wiki/Preparing-a-test-environment-for-running-tests-from-a-local-PC-using-MacOS-10.13-High-Sierra-as-an-example">MacOS</a>
   </li>
-  
-<hr>
