@@ -1,6 +1,9 @@
 <h1>Info</h1>
 <ul>
   <li>
+    <a href="https://github.com/OlexandrPrylipko/gForm/wiki/Helpers">Helpers</a>
+  </li>
+  <li>
     <a href="https://drive.google.com/open?id=0B0zO6-KrfM82eHRHcThLMnNPazVOTDVXeFY4MDFPOEV6eW1F">Test task_AQA_TN</a>
   </li>
   <li>
