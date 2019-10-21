@@ -3,7 +3,7 @@
   <li>
     <a href="https://drive.google.com/open?id=0B0zO6-KrfM82eHRHcThLMnNPazVOTDVXeFY4MDFPOEV6eW1F">Test task_AQA_TN</a>
   </li>
-    <li>
+  <li>
     <a href="https://drive.google.com/open?id=1qhRlC18DF5XClYIwIjU4ccTDOnECF63I-zCLOr-zkYM">Test Case</a>
   </li>
   <li>
@@ -22,3 +22,4 @@
   <li>
     <a href="https://github.com/OlexandrPrylipko/gForm/wiki/Preparing-a-test-environment-for-running-tests-from-a-local-PC-using-MacOS-10.13-High-Sierra-as-an-example">MacOS</a>
   </li>
+</ul>
