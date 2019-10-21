@@ -1,3 +1,4 @@
+<h1>Info</h1>
 <ul>
   <li>
     <a href="https://drive.google.com/open?id=0B0zO6-KrfM82eHRHcThLMnNPazVOTDVXeFY4MDFPOEV6eW1F">Test task_AQA_TN</a>
@@ -9,7 +10,7 @@
     <a href="https://drive.google.com/open?id=12MEfE1yhDS6TV7g6Dd0cXLpp8qY4f-vPa48owcZ4bMw">Analize web-form</a>
   </li>
 </ul>
-<hr>
+
 <h1>Instructions for running tests on different OS</h1>
 <ul>
   <li>
